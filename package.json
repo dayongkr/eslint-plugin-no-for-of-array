@@ -1,12 +1,36 @@
 {
   "name": "eslint-prefer-for-over-array",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "build": "tsc"
+  },
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    }
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "dayonkr",
+  "license": "MIT",
+  "packageManager": "pnpm@9.10.0",
+  "dependencies": {
+    "@typescript-eslint/utils": "^8.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "@typescript-eslint/rule-tester": "^8.6.0",
+    "typescript": "^5.6.2",
+    "typescript-eslint": "^8.6.0",
+    "vitest": "^2.1.1"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/parser": "^8.6.0",
+    "eslint": "^9.11.0",
+    "typescript": "^5.6.2"
+  }
 }
