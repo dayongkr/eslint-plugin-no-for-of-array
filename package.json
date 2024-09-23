@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-not-for-of-array",
-  "version": "0.0.2",
+  "name": "eslint-plugin-no-for-of-array",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "vitest",

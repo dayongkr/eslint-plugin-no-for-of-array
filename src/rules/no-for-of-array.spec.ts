@@ -1,6 +1,6 @@
 import { RuleTester } from "@typescript-eslint/rule-tester";
 import tseslint from "typescript-eslint";
-import { rule } from "./not-for-of-array.js";
+import { rule } from "./no-for-of-array.js";
 import * as vitest from "vitest";
 import { join } from "path";
 
@@ -50,11 +50,11 @@ ruleTester.run("prefer-for-over-array", rule, {
       for (const item of Object.entries({ a: 1, b: 2, c: 3 })) {}
       `,
       errors: [
-        { messageId: "preferForOverArray", line: 3, column: 7 },
-        { messageId: "preferForOverArray", line: 4, column: 7 },
-        { messageId: "preferForOverArray", line: 5, column: 7 },
-        { messageId: "preferForOverArray", line: 6, column: 7 },
-        { messageId: "preferForOverArray", line: 7, column: 7 },
+        { messageId: "noForOfArray", line: 3, column: 7 },
+        { messageId: "noForOfArray", line: 4, column: 7 },
+        { messageId: "noForOfArray", line: 5, column: 7 },
+        { messageId: "noForOfArray", line: 6, column: 7 },
+        { messageId: "noForOfArray", line: 7, column: 7 },
       ],
     },
   ],

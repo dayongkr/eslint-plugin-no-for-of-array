@@ -1,27 +1,27 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
-import * as ts from "typescript";
 
-export interface PreferForOverArrayRuleDocs {
+export interface noForOfArrayRuleDocs {
   description: string;
   recommended?: boolean;
   requiresTypeChecking?: boolean;
 }
-export const createRule = ESLintUtils.RuleCreator<PreferForOverArrayRuleDocs>(
-  () => "https://www.npmjs.com/package/eslint-prefer-for-over-array"
+export const createRule = ESLintUtils.RuleCreator<noForOfArrayRuleDocs>(
+  () => "https://www.npmjs.com/package/eslint-plugin-not-for-of-array"
 );
 
 export const rule = createRule({
-  name: "prefer-for-over-array",
+  name: "no-for-of-array",
   meta: {
     type: "suggestion",
     docs: {
-      description: "Prefer for loop over array, rather than for...of loop",
+      description:
+        "Do not use for...of loop with array, use for loop instead, because for loop is faster than for...of loop",
       recommended: true,
       requiresTypeChecking: true,
     },
     messages: {
-      preferForOverArray:
-        "Prefer for loop over array, rather than for...of loop",
+      noForOfArray:
+        "Do not use for...of loop with array, use for loop instead, because for loop is faster than for...of loop",
     },
     schema: [],
   },
@@ -38,7 +38,7 @@ export const rule = createRule({
         if (typeChecker.isArrayType(type)) {
           context.report({
             node,
-            messageId: "preferForOverArray",
+            messageId: "noForOfArray",
           });
         }
       },
