@@ -30,11 +30,11 @@ export const rule = createRule({
   create(context) {
     const services = ESLintUtils.getParserServices(context);
     const typeChecker = services.program.getTypeChecker();
+
     return {
       ForOfStatement(node) {
         const type = services.getTypeAtLocation(node.right);
 
-        // Object.keys, Object.values, Object.entries, Set, Map are not array
         if (typeChecker.isArrayType(type)) {
           context.report({
             node,
