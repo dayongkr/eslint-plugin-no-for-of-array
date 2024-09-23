@@ -1,5 +1,5 @@
 {
-  "name": "eslint-prefer-for-over-array",
+  "name": "eslint-plugin-not-for-of-array",
   "version": "0.0.1",
   "main": "lib/index.js",
   "scripts": {

@@ -13,7 +13,6 @@ const plugin = {
   meta: { name, version },
   rules,
 };
-
 const recommended = {
   plugins: {
     "prefer-for-over-array": { plugin },

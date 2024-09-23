@@ -16,6 +16,8 @@ export const rule = createRule({
     type: "suggestion",
     docs: {
       description: "Prefer for loop over array, rather than for...of loop",
+      recommended: true,
+      requiresTypeChecking: true,
     },
     messages: {
       preferForOverArray:
