@@ -15,7 +15,7 @@ const plugin = {
 };
 const recommended = {
   plugins: {
-    "prefer-for-over-array": { plugin },
+    "eslint-plugin-not-for-of-array": { plugin },
   },
   rules,
 };

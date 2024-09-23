@@ -1,6 +1,6 @@
 import { RuleTester } from "@typescript-eslint/rule-tester";
 import tseslint from "typescript-eslint";
-import { rule } from "./prefer-for-over-array.js";
+import { rule } from "./not-for-of-array.js";
 import * as vitest from "vitest";
 import { join } from "path";
 

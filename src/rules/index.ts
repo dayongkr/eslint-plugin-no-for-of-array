@@ -1,5 +1,5 @@
-import { rule as preferForOverArray } from "./prefer-for-over-array.js";
+import { rule as preferForOverArray } from "./not-for-of-array.js";
 
 export const rules = {
-  "prefer-for-over-array": preferForOverArray,
+  "eslint-plugin-not-for-of-array": preferForOverArray,
 };
